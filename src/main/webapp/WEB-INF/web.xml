@@ -1,7 +1,23 @@
 <!DOCTYPE web-app PUBLIC
  "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+<!-- 注册servlet到项目中 -->
+<servlet>
+<!-- servlet-name给你要注册的servlet起一个名字，随便写，不能重复。 -->
+<servlet-name>BServlet</servlet-name>
+<!-- 完整类名 -->
+<servlet-class>com.zhangpan.servlet.hello.BServlet</servlet-class>
+</servlet>
+<!-- 分配一个路径给servlet -->
+<servlet-mapping>
+<!-- 为哪个Servlet分配路径 -->
+<servlet-name>BServlet</servlet-name>
+<!-- 当前为哪个路径 分配路径 -->
+<!-- "/"这个"/"http://localhost:8080/lander-xhz/BServlet -->
+<url-pattern>/BServlet</url-pattern>
+</servlet-mapping>
+ <welcome-file-list>
+        <welcome-file>HelloWorld.html</welcome-file>
+  </welcome-file-list>
 </web-app>
