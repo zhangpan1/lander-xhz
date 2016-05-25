@@ -1,6 +1,7 @@
 package com.zhangpan.servlet.hello;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletConfig;
@@ -28,7 +29,17 @@ public class BServlet implements Servlet{
 		//1.获得servlet的name
 		String servletName = getServletConfig().getServletName();
 		//将字符串输出到客户端（浏览器）
-		res.getWriter().print(servletName);
+		res.getWriter().print(servletName+"<br/>");
+		/*
+		 *  String getInitParameter(String name) 
+	   Enumeration getInitParameterNames()  
+        */
+		Enumeration<String> en =getServletConfig().getInitParameterNames();
+		while(en.hasMoreElements()){
+			String key = en.nextElement();
+			String value = getServletConfig().getInitParameter(key);
+			res.getWriter().print(key+"==>"+value+"<br/>");
+		}
 	}
 
 	@Override
