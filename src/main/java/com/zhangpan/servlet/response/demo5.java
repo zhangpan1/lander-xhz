@@ -1,30 +1,28 @@
 package com.zhangpan.servlet.response;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * 响应 分为4部分
- * 响应首行
- * 响应头
- * 响应空行
- * 响应正文
- * @author zhangp
- *response要干的事情，给这三个部分添加内容
- *肯定有一个方法是添加状态码，和描述状态码的
- *
- */
-public class demo1 extends HttpServlet{
+public class demo5 extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		resp.sendError(404, "找到也不告诉你");
-		
+		//乱码问题，浏览器，和服务器
+		resp.setCharacterEncoding("utf-8");
+		//1 获得字符流
+	    PrintWriter pw = resp.getWriter();
+	    //ISO-8859-1
+		//2发送汉字
+		pw.print("你好，世界");
+		//控制浏览器端使用的解码集
+		resp.setHeader("Content-Type", "text/html;charset=utf-8");
+		//控制服务器端的编码
 	}
 
 	@Override

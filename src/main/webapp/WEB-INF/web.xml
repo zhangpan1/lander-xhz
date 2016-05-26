@@ -14,9 +14,9 @@
 	
 <servlet>
 <!-- servlet-name给你要注册的servlet起一个名字，随便写，不能重复。 -->
-<servlet-name>Count1Servlet</servlet-name>
+<servlet-name>demo7</servlet-name>
 <!-- 完整类名 -->
-<servlet-class>com.zhang.servlet.count.Count1Servlet</servlet-class>
+<servlet-class>com.zhangpan.servlet.response.demo7</servlet-class>
 <init-param>
 <param-name>name</param-name>
 <param-value>xhz</param-value>
@@ -28,10 +28,10 @@
 <!-- 分配一个路径给servlet -->
 <servlet-mapping>
 <!-- 为哪个Servlet分配路径 -->
-<servlet-name>Count1Servlet</servlet-name>
+<servlet-name>demo7</servlet-name>
 <!-- 当前为哪个路径 分配路径 -->
-<!-- "/"这个"/"http://localhost:8080/lander-xhz/Count1Servlet -->
-<url-pattern>/Count1Servlet</url-pattern>
+<!-- "/"这个"/"http://localhost:8080/lander-xhz/demo3 -->
+<url-pattern>/demo7</url-pattern>
 </servlet-mapping>
  <welcome-file-list>
         <welcome-file>HelloWorld.html</welcome-file>
