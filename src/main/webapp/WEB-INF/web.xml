@@ -14,9 +14,9 @@
 	
 <servlet>
 <!-- servlet-name给你要注册的servlet起一个名字，随便写，不能重复。 -->
-<servlet-name>GServlet</servlet-name>
+<servlet-name>Cookie3</servlet-name>
 <!-- 完整类名 -->
-<servlet-class>com.zhang.servlet.includ.GServlet</servlet-class>
+<servlet-class>com.zhangpan.servlet.cookie.Cookie3</servlet-class>
 <init-param>
 <param-name>name</param-name>
 <param-value>xhz</param-value>
@@ -27,9 +27,9 @@
 </servlet>
 <servlet>
 <!-- servlet-name给你要注册的servlet起一个名字，随便写，不能重复。 -->
-<servlet-name>FServlet</servlet-name>
+<servlet-name>LoginSevlet</servlet-name>
 <!-- 完整类名 -->
-<servlet-class>com.zhang.servlet.includ.FServlet</servlet-class>
+<servlet-class>com.zhangpan.login.xhz.LoginSevlet</servlet-class>
 <init-param>
 <param-name>name</param-name>
 <param-value>xhz</param-value>
@@ -41,17 +41,17 @@
 <!-- 分配一个路径给servlet -->
 <servlet-mapping>
 <!-- 为哪个Servlet分配路径 -->
-<servlet-name>GServlet</servlet-name>
+<servlet-name>LoginSevlet</servlet-name>
 <!-- 当前为哪个路径 分配路径 -->
 <!-- "/"这个"/"http://localhost:8080/lander-xhz/WEB-INF/demo3 -->
-<url-pattern>/GServlet</url-pattern>
+<url-pattern>/LoginSevlet</url-pattern>
 </servlet-mapping>
 <servlet-mapping>
 <!-- 为哪个Servlet分配路径 -->
-<servlet-name>FServlet</servlet-name>
+<servlet-name>Cookie3</servlet-name>
 <!-- 当前为哪个路径 分配路径 -->
-<!-- "/"这个"/"http://localhost:8080/lander-xhz/WEB-INF/demo3 -->
-<url-pattern>/FServlet</url-pattern>
+<!-- "/"这个"/"http://localhost:8080/lander-xhz/Cookie1-->
+<url-pattern>/Cookie3</url-pattern>
 </servlet-mapping>
  <welcome-file-list>
         <welcome-file>HelloWorld.html</welcome-file>
