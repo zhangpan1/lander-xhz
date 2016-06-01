@@ -1,4 +1,4 @@
- <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%-- <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -23,8 +23,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-  <%--  EL表达式 内置对象的操作
-   	${} ==> el的格式 --%>
+   EL表达式 内置对象的操作
+   	${} ==> el的格式
    
     <%
     request.setAttribute("name", "requestTom");
@@ -33,7 +33,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     //pageContext.setAttribute("name", "pageTom");
     	
      %>
-     ${requestScope.name}
    	${requestScope.name}==><% request.getAttribute("name"); %><br>
    	${sessionScope.name}==><% session.getAttribute("name"); %><br>
    	${applicationScope.name}==><% application.getAttribute("name"); %><br>
@@ -55,8 +54,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
    		${header.Accept } ==> <%request.getHeader("Accept"); %><br>
    		${headerValues.Accept } ==> <%request.getHeaders("Accept"); %><br>
    		${initParam.name } ==> <% application.getInitParameter("name"); %><br>
-<%--    		${pageContext.request.contextPath } ==> <% ((HttpServletRequest)pageContext.getRequest()).getContextPath(); %><br/> --%>
-   		${cookie.name.value } ==> <% 
+   		${pageContext.request.contextPath } ==> <% ((HttpServletRequest)pageContext.getRequest()).getContextPath(); %><br>
+ 		${cookie.name.value } ==> <% 
  					Cookie c = new Cookie("name","jerry");
  					c.setMaxAge(60*60);
  					response.addCookie(c);
@@ -69,3 +68,4 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  		 %>
   </body>
 </html>
+ --%>
