@@ -1,4 +1,4 @@
-package com.eversec.zhangpan.crm;
+/*package com.eversec.zhangpan.crm;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 	public void updateCustomer(Customer c) throws IdIsNullEmpty {
-		if(c.getId()==0/*c.getId()==null*/)
+		if(c.getId()==0c.getId()==null)
 			throw new IdIsNullEmpty("The customer's id can not be empty");
 		cDao.update(c);
 	}
@@ -29,3 +29,4 @@ public class BusinessServiceImpl implements BusinessService {
 	}
 
 }
+*/
